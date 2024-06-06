@@ -48,6 +48,7 @@ main {
 }
 
 .current-temperature-container {
+  width: fit-content;
   font-size: 48px;
   display: flex;
 }
