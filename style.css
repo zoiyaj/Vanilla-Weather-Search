@@ -80,6 +80,14 @@ main {
 .current-details strong {
   color: #f65282;
 }
+#currentWind {
+  color: #f65282;
+  font-weight: 900;
+}
+#currentHumidity {
+  color: #f65282;
+  font-weight: 900;
+}
 
 .current-temperature-value {
   margin-top: 20px;

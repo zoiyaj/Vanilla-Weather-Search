@@ -4,6 +4,25 @@ function displayTemperature(response) {
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
+  let humidityElement = document.querySelector("#currentHumidity");
+  humidityElement = response.data.temperature.humidity;
+  currentHumidity.innerHTML = humidityElement + "%";
+
+  let windElement = document.querySelector("#currentWind");
+  windElement = response.data.wind.speed;
+  currentWind.innerHTML = windElement + "km/h";
+
+  let conditionElement = document.querySelector("#atmosphere");
+  conditionElement = response.data.condition.description;
+  atmosphere.innerHTML = conditionElement;
+
+  let iconElement = document.querySelector("#icon");
+
+  iconElement = `<img
+      src="${response.data.condition.icon_url}"
+      class="weather-app-icon"
+    />`;
+  icon.innerHTML = iconElement;
 }
 
 function search(event) {
