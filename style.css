@@ -56,6 +56,7 @@ main {
 .current-temperature-container img {
   padding: 0;
   margin-top: 10px;
+  margin-left: -5px;
 }
 
 .current-weather {
