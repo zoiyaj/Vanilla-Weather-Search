@@ -82,6 +82,7 @@ main {
 }
 
 .current-temperature-value {
+  margin-top: 5px;
   font-size: 80px;
   font-weight: bold;
 }
