@@ -89,6 +89,7 @@ main {
   font-size: 28px;
   position: relative;
   display: inline-flex;
+  margin-top: 5px;
 }
 
 footer {
