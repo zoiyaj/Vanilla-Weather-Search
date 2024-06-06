@@ -50,7 +50,7 @@ main {
 .current-temperature-container {
   width: fit-content;
   font-size: 48px;
-  display: inline;
+  display: inline-flex;
 }
 
 .current-temperature-container img {
