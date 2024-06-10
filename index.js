@@ -23,6 +23,7 @@ function displayTemperature(response) {
       class="weather-app-icon"
     />`;
   icon.innerHTML = iconElement;
+  getForecast(response.data.city);
 }
 
 function search(event) {
@@ -71,7 +72,17 @@ let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "feaeta6473b4b23fd60370ob33dc4c40";
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+  let apiKey = "feaeta6473b4b23fd60370ob33dc4c40";
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
   let forecastElement = document.querySelector("#forecast");
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
@@ -88,7 +99,7 @@ function displayForecast() {
               /></div>
               
               <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-max">18° </span>
+                <span class="weather-forecast-temperature-max"><strong>18</strong> </span>
                 <span class="weather-forecast-temperature-min">12°</span>
               </div></div>`;
   });
