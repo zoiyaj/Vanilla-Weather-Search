@@ -1,5 +1,5 @@
 body {
-  background: #f9f7fe;
+  background: linear-gradient(to right, #434343 0%, black 100%);
   font-family: "Roboto", sans-serif;
 }
 
@@ -8,135 +8,133 @@ a {
 }
 
 .weather-app {
-  background: white;
+  background: linear-gradient(
+    99.6deg,
+    rgb(112, 128, 152) 10.6%,
+    rgb(242, 227, 234) 32.9%,
+    rgb(234, 202, 213) 52.7%,
+    rgb(220, 227, 239) 72.8%,
+    rgb(185, 205, 227) 81.1%,
+    rgb(154, 180, 212) 102.4%
+  );
   max-width: 600px;
-  margin: 60px auto;
-  padding: 30px;
-  border-radius: 10px;
+  margin: 45px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 900px;
+  font-family: "Fjalla One", sans-serif;
 }
 
 header {
   border-bottom: 1px solid #f9f7fe;
-  padding-bottom: 30px;
+  padding: 0 0 30px 0;
 }
 
-.search-input {
+.search-form-input {
   background-color: #f9f7fe;
   border: none;
-  color: rgba(39, 33, 66, 0.4);
-  font-size: 16px;
-  padding: 17px;
-  width: 80%;
   border-radius: 6px;
+  width: 80%;
+  font-size: 16px;
+  padding: 15px 20px;
 }
 
-.search-button {
-  margin-left: 5px;
-  font-size: 16px;
-  background-color: #885df1;
-  color: white;
+.search-form-button {
+  background: #885df1;
+  padding: 15px 30px;
   border: none;
-  padding: 17px;
-  width: 18%;
-  line-height: 1;
-  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 5px;
+  border-radius: 6px;
+  color: white;
 }
 
 main {
   padding: 30px 0;
 }
 
-.current-temperature-container {
-  width: fit-content;
-  font-size: 48px;
-  display: inline-flex;
-}
-
-.current-temperature-container img {
-  padding: 0;
-  display: inline-flex;
-  width: 150px;
-}
-
-.current-weather {
+.weather-app-data {
   display: flex;
   justify-content: space-between;
 }
 
-.current-city {
-  font-size: 38px;
-  font-weight: 900;
+.weather-app-city {
   margin: 0;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 38px;
+  line-height: 48px;
 }
-.current-details {
-  color: rgba(39, 33, 66, 0.4);
+
+.weather-app-details {
   font-size: 16px;
-  font-weight: 400;
+  color: rgba(39, 33, 66, 0.4);
   line-height: 24px;
+  font-weight: 500;
 }
 
-.current-details strong {
+.weather-app-details strong {
   color: #f65282;
-}
-#currentWind {
-  color: #f65282;
-  font-weight: 900;
-}
-#currentHumidity {
-  color: #f65282;
-  font-weight: 900;
 }
 
-.current-temperature-value {
-  margin-top: 20px;
-  font-size: 80px;
+.weather-app-temperature-container {
+  display: flex;
+}
+
+.weather-app-icon {
+  width: 88px;
+  height: 88px;
+}
+
+.weather-app-temperature {
+  font-size: 88px;
+  line-height: 88px;
   font-weight: bold;
 }
 
-.current-temperature-unit {
+.weather-app-unit {
+  margin-top: 6px;
   font-size: 28px;
-  position: relative;
-  display: inline-flex;
-  margin-top: 20px;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.weather-forecast-date {
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: #f65282;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-forecast-temperature {
+  padding: 0 10px;
 }
 
 footer {
   border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
   text-align: center;
-  padding-top: 15px;
-  font-style: italic;
-
-  color: rgba(39, 33, 66, 0.4);
-}
-
-.weather-forecast-container {
-  margin-top: 20px 0;
-  text-align: center;
-  color: #000;
-  display: inline-block;
-  padding: 25px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-}
-.weather-forecast-icon {
-  display: inline-block;
-  margin: 0 auto;
-}
-.weather-forecast-date {
-  font-size: 16px;
-  opacity: 0.5;
-}
-
-.weather-forecast-temperature-min {
-  opacity: 0.5;
-  color: #f65282;
-}
-.weather-forecast-temperature-max {
-  color: #f65282;
-  font-weight: 900;
-}
-.weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
 }
